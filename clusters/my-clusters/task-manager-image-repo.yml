@@ -1,0 +1,9 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: task-manager-repo
+  namespace: flux-system
+spec:
+  image: armanharutyunyan451/task-manager
+  interval: 15s
