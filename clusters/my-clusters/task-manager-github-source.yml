@@ -5,7 +5,9 @@ metadata:
   name: task-manager-github-source
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 10s
   ref:
     branch: main
-  url: https://github.com/armanharut98/backend_task_manager.git
+  secretRef:
+    name: flux-github-deploy-key
+  url: ssh://git@github.com/armanharut98/backend_task_manager.git
